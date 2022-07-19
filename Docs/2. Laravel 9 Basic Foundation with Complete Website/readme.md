@@ -22,18 +22,42 @@ sample screen shot of the project
 
 ## 3. Essential Environment Setup
 
-## 4. Laravel 9 Installation
+### instal xampp
 
-## 5. Discuss on Laravel Folder Structure
+[instal](https://www.apachefriends.org/download.html)
+and enable the gd extension in the php.ini file.
 
-## 6. What is MVC and Its Benefits
+go to this url
+[localhost](http://localhost/dashboard/)
+[php info](http://localhost/dashboard/phpinfo.php)
+[php myadmin](http://localhost/dashboard/phpmyadmin/)
 
-## 7. What is Route
+### install nodejs
 
-## 9. Laravel Blade Syntax
+[nodejs](https://nodejs.org/en/download/)
 
-## 10. How to Make Controller And Get Url Request Part 1
+### install composer
 
-## 11. How to Make Controller And Get Url Request Part 2
+[composer](https://getcomposer.org/download/)
 
-## 12. Middleware
+## Laravel 9 Installation
+
+got to the desired location and create your project
+
+```shell
+🦤_> composer create-project laravel/laravel my-project
+```
+
+## Discuss on Laravel Folder Structure
+
+## What is MVC and Its Benefits
+
+## What is Route
+
+## Laravel Blade Syntax
+
+## How to Make Controller And Get Url Request Part 1
+
+## How to Make Controller And Get Url Request Part 2
+
+## Middleware
