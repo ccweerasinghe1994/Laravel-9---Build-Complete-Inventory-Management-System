@@ -26,11 +26,12 @@
     - [Simple Example](#simple-example)
   - [What is Route](#what-is-route)
     - [Controller and View In Action](#controller-and-view-in-action)
-  - [Laravel Blade Syntax](#laravel-blade-syntax)
+  - [LAravel Routes](#laravel-routes)
     - [let's create contact and about blade files](#lets-create-contact-and-about-blade-files)
       - [about page](#about-page)
       - [contact page](#contact-page)
       - [web.php](#webphp)
+  - [Laravel Blade Syntax](#laravel-blade-syntax)
   - [How to Make Controller And Get Url Request Part 1](#how-to-make-controller-and-get-url-request-part-1)
   - [How to Make Controller And Get Url Request Part 2](#how-to-make-controller-and-get-url-request-part-2)
   - [Middleware](#middleware)
@@ -236,7 +237,7 @@ let's remove all code from this file.
 
 ![img](./../img/21.png)
 
-## Laravel Blade Syntax
+## LAravel Routes
 
 ### let's create contact and about blade files
 
@@ -308,6 +309,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 ```
+
+## Laravel Blade Syntax
 
 ###
 
