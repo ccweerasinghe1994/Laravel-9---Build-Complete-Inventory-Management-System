@@ -334,13 +334,13 @@ echo $world;
 
 ```
 
-###
-
-###
-
-###
-
 ## How to Make Controller And Get Url Request Part 1
+
+###
+
+###
+
+###
 
 ## How to Make Controller And Get Url Request Part 2
 
