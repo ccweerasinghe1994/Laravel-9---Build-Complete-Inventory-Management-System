@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<h1>This is the Contact Page</h1>
+<h1>This is the Contact Page from controller</h1>
 </body>
 
 </html>

@@ -33,6 +33,12 @@
       - [web.php](#webphp)
   - [Laravel Blade Syntax](#laravel-blade-syntax)
   - [How to Make Controller And Get Url Request Part 1](#how-to-make-controller-and-get-url-request-part-1)
+    - [this is what we have now in the web.php](#this-is-what-we-have-now-in-the-webphp)
+    - [Let’s make a controller](#lets-make-a-controller)
+    - [Importing the Controller](#importing-the-controller)
+    - [Demo Controller](#demo-controller)
+    - [Let’s do the same thing to the contact page](#lets-do-the-same-thing-to-the-contact-page)
+    - [Laravel 9 way Route::controller](#laravel-9-way-routecontroller)
   - [How to Make Controller And Get Url Request Part 2](#how-to-make-controller-and-get-url-request-part-2)
   - [Middleware](#middleware)
 
@@ -336,12 +342,169 @@ echo $world;
 
 ## How to Make Controller And Get Url Request Part 1
 
-###
+### this is what we have now in the web.php
 
-###
+```php
+<?php
 
-###
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+```
+
+let's use the controllers to pass the view instead of the view file.
+
+### Let’s make a controller
+
+```bash
+⮞  php artisan make:controller Demo/DemoController
+
+Controller created successfully.
+
+```
+
+Let’s control our views using this newly created controller.
+
+### Importing the Controller
+
+So the first we have to use the route and the HTTP method inside the HTTP method. we have to 1st add the route url. Then inside square brackets we can add the controller and the method we want to execute.
+
+```php
+<?php
+
+use App\Http\Controllers\Demo\DemoController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+// example
+Route::get('/about', [DemoController::class, 'Index']);
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+```
+
+Now let’s go to the controller.
+method will do the same thing we did in the web PHP file.
+
+### Demo Controller
+
+```php
+<?php
+
+namespace App\Http\Controllers\Demo;
+
+use App\Http\Controllers\Controller;
+
+class DemoController extends Controller
+{
+    function Index()
+    {
+        return view('about');
+    }
+}
+
+```
+
+This is our About page.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+</head>
+<body>
+<h1>This is a About page From the controller</h1>
+</body>
+</html>
+
+
+```
+
+Let’s  test this.
+![img](./../img/22.png)
+
+### Let’s do the same thing to the contact page
+
+```php
+Route::get('/contact', [DemoController::class, 'Contact']);
+```
+
+This is our contact method in the controller.
+
+```php
+ function Contact()
+    {
+        return view('contact');
+    }
+```
+
+This is our contact page.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+
+<body>
+<h1>This is the Contact Page from controller</h1>
+</body>
+
+</html>
+
+```
+
+test
+
+![img](./../img/23.png);
+
+### Laravel 9 way Route::controller
+
+In Laravel 8 all other old versions every time we have to mention the controller name But in Laravel 9 there’s a new way.
+
+```blade
+Route::controller(DemoController::class)->group(function () {
+    Route::get('/about', 'Index');
+    Route::get('/contact', 'Contact');
+});
+```
+
+So in here we don’t have to mention the controller name each and every time we use the controller we can group the methods that are using by the same controller into a route controller group.
+
+test
+![img](./../img/23.png);
 
 ## How to Make Controller And Get Url Request Part 2
+
+```php
+
+```
+
+###
+
+###
 
 ## Middleware
