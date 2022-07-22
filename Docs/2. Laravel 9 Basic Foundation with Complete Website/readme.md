@@ -26,7 +26,7 @@
     - [Simple Example](#simple-example)
   - [What is Route](#what-is-route)
     - [Controller and View In Action](#controller-and-view-in-action)
-  - [LAravel Routes](#laravel-routes)
+  - [Laravel Routes](#laravel-routes)
     - [let's create contact and about blade files](#lets-create-contact-and-about-blade-files)
       - [about page](#about-page)
       - [contact page](#contact-page)
@@ -243,7 +243,7 @@ let's remove all code from this file.
 
 ![img](./../img/21.png)
 
-## LAravel Routes
+## Laravel Routes
 
 ### let's create contact and about blade files
 
@@ -495,7 +495,7 @@ Route::controller(DemoController::class)->group(function () {
 So in here we don’t have to mention the controller name each and every time we use the controller we can group the methods that are using by the same controller into a route controller group.
 
 test
-![img](./../img/23.png);
+![img](./../img/23.png)
 
 ## How to Make Controller And Get Url Request Part 2
 
