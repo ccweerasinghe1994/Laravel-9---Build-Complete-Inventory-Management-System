@@ -485,7 +485,7 @@ test
 
 In Laravel 8 all other old versions every time we have to mention the controller name But in Laravel 9 there’s a new way.
 
-```blade
+```php
 Route::controller(DemoController::class)->group(function () {
     Route::get('/about', 'Index');
     Route::get('/contact', 'Contact');
